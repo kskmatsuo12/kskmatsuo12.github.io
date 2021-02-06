@@ -84,6 +84,14 @@ export default {
   components: {
     Logo,
     VuetifyLogo
+  },
+  created(){
+    this.test()
+  },
+  methods: {
+    test: axios.get('https://www.metaweather.com/api/location/15015370/').then(res=>{
+      console.log(res)
+    })
   }
 }
 </script>

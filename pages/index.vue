@@ -89,9 +89,11 @@ export default {
     this.test()
   },
   methods: {
-    test: axios.get('https://www.metaweather.com/api/location/15015370/').then(res=>{
-      console.log(res)
-    })
+    test: async function(){
+     const res =  await fetch('https://www.metaweather.com/api/location/15015370/')
+     const data = await res.json()
+     console.log(data)
+    }
   }
 }
 </script>

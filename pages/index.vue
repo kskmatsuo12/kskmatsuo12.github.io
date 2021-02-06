@@ -90,7 +90,9 @@ export default {
   },
   methods: {
     test: async function(){
-     const res =  await fetch('https://www.metaweather.com/api/location/15015370/')
+     const res =  await fetch('https://www.metaweather.com/api/location/15015370/', {
+        mode: 'cors'
+    })
      const data = await res.json()
      console.log(data)
     }
